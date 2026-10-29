@@ -865,11 +865,18 @@ h1,h2,h3,h4,.brand b,.copy h3,.section-head h2,.feature h3,.step h3,.trust stron
 @media (max-width:900px){.pkg{grid-template-columns:1fr}.testi{grid-template-columns:1fr}.quote{grid-template-columns:1fr}.quote-left{padding:34px 24px}.quote-right{padding:30px 24px;border-left:0;border-top:1px solid var(--line)}.sticky-cta{display:block}body{padding-bottom:74px}.wa-float{bottom:84px}}
 @media (prefers-reduced-motion:reduce){.pkg-card,.testi-card{transition:none}}
 
+
+/* ================= MARKA PARTICLE FIELD (desktop) ================= */
+#marka-canvas{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;display:none}
+@media (min-width:901px) and (hover:hover) and (pointer:fine){#marka-canvas{display:block}}
+@media (prefers-reduced-motion:reduce){#marka-canvas{display:none!important}}
+
 </style>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@8..144,400..600&display=swap">
 </head>
 <body>
 <header class="nav"><a class="brand" href="#top"><img class="brand-logo" src="commerce-assets/logo/logo-ftti-transparent.png" alt="Logo ATP" decoding="async" fetchpriority="high"><span><b>CV. ANUGERAH TIGA PILAR</b><small>Supplier & General Contractor</small></span></a><nav class="links"><a href="#rambu">Rambu</a><a href="#marka">Marka Jalan</a><a href="#proses">Proses</a><a href="#kontak">Kontak</a></nav><button class="nav-toggle" type="button" aria-label="Buka menu" aria-expanded="false"><span></span><span></span><span></span></button></header>
+<canvas id="marka-canvas" aria-hidden="true"></canvas>
 <main id="top">
 <section class="hero"><div class="eyebrow">Solusi keselamatan jalan dari <span class="orb"></span> CV. ANUGERAH TIGA PILAR</div><h1 class="atp-type" data-text="Jalan yang aman, dimulai dari sini." aria-label="Jalan yang aman, dimulai dari sini."></h1><p>Kami melayani pembuatan Rambu-rambu Lalulintas dan Pengecatan Marka Jalan</p><div class="actions"><a class="btn primary ripple" href="#rambu">Lihat produk</a><a class="btn ripple" href="#kontak">Minta penawaran</a></div><span class="scroll">scroll to explore ↓</span></section>
 <section class="section reveal"><div class="trust"><div><strong>Rambu & marka</strong><span>Satu partner untuk kebutuhan keselamatan jalan</span></div><div><strong>Rapi & jelas</strong><span>Pengerjaan memperhatikan fungsi dan tampilan</span></div><div><strong>Untuk berbagai area</strong><span>Proyek, kawasan, gedung, dan lingkungan</span></div><div><strong>Konsultasi kebutuhan</strong><span>Diskusikan spesifikasi sebelum pengerjaan</span></div></div></section>
@@ -1338,6 +1345,123 @@ document.querySelectorAll('.btn, .wa-float, .nav-toggle').forEach(function(el) {
   }
   window.addEventListener('scroll',onScroll,{passive:true});
   onScroll();
+})();
+</script>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = window.matchMedia('(hover:hover)').matches && window.matchMedia('(pointer:fine)').matches;
+  var wide = window.matchMedia('(min-width:901px)').matches;
+  if (reduce || !fine || !wide) return;
+
+  var canvas = document.getElementById('marka-canvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d', {alpha:true});
+  if (!ctx) return;
+
+  var W = 0, H = 0, dpr = 1;
+  var dashes = [];
+  var GAP = 46;            // jarak antar sel
+  var DASH_LEN = 17;       // panjang dash
+  var DASH_W = 3.4;        // tebal dash
+  var RADIUS = 190;        // radius pengaruh cursor
+  var mouse = {x:-9999, y:-9999, active:false};
+
+  var INK = '22,23,28';
+  var PAINT = '44,100,237';
+  var WARN = '217,75,69';
+
+  function size(){
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    W = window.innerWidth; H = window.innerHeight;
+    canvas.width = Math.round(W * dpr);
+    canvas.height = Math.round(H * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    build();
+  }
+
+  function build(){
+    dashes = [];
+    var cols = Math.ceil(W / GAP) + 1;
+    var rows = Math.ceil(H / GAP) + 1;
+    var offX = (W - (cols - 1) * GAP) / 2;
+    var offY = (H - (rows - 1) * GAP) / 2;
+    for (var r = 0; r < rows; r++){
+      for (var c = 0; c < cols; c++){
+        var gx = offX + c * GAP;
+        var gy = offY + r * GAP;
+        dashes.push({
+          gx: gx, gy: gy,
+          rot: Math.random() * Math.PI,
+          phase: Math.random() * Math.PI * 2,
+          speed: 0.4 + Math.random() * 0.7,
+          drift: 6 + Math.random() * 14,
+          hue: Math.random() < 0.07 ? WARN : INK
+        });
+      }
+    }
+  }
+
+  window.addEventListener('resize', function(){ clearTimeout(window.__mkT); window.__mkT = setTimeout(size, 140); });
+  window.addEventListener('orientationchange', function(){ setTimeout(size, 200); });
+
+  window.addEventListener('mousemove', function(e){
+    mouse.x = e.clientX; mouse.y = e.clientY; mouse.active = true;
+  }, {passive:true});
+  document.addEventListener('mouseleave', function(){
+    mouse.active = false; mouse.x = -9999; mouse.y = -9999;
+  });
+
+  function frame(t){
+    var time = t * 0.001;
+    ctx.clearRect(0, 0, W, H);
+    ctx.lineCap = 'round';
+
+    for (var i = 0; i < dashes.length; i++){
+      var d = dashes[i];
+
+      // posisi acak saat idle (drift halus berbasis sinus)
+      var idleX = d.gx + Math.cos(time * d.speed + d.phase) * d.drift;
+      var idleY = d.gy + Math.sin(time * d.speed * 1.3 + d.phase) * d.drift;
+      var idleRot = d.rot + Math.sin(time * 0.6 + d.phase) * 0.5;
+
+      var x = idleX, y = idleY, rot = idleRot, alpha = 0.16, col = d.hue, len = DASH_LEN;
+
+      if (mouse.active){
+        var dx = d.gx - mouse.x;
+        var dy = d.gy - mouse.y;
+        var dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < RADIUS){
+          var k = 1 - dist / RADIUS;
+          var ease = k * k * (3 - 2 * k);
+          // snap ke grid: dash jadi horizontal, rapi, sejajar
+          x = d.gx + (idleX - d.gx) * (1 - ease);
+          y = d.gy + (idleY - d.gy) * (1 - ease);
+          rot = idleRot * (1 - ease);
+          alpha = 0.16 + ease * 0.74;
+          len = DASH_LEN + ease * 5;
+          // warna berubah jadi cat biru di inti, sisanya ink
+          if (k > 0.72) col = PAINT;
+          else if (k > 0.45) col = '60,90,160';
+        }
+      }
+
+      var hx = Math.cos(rot) * len / 2;
+      var hy = Math.sin(rot) * len / 2;
+      ctx.beginPath();
+      ctx.moveTo(x - hx, y - hy);
+      ctx.lineTo(x + hx, y + hy);
+      ctx.lineWidth = DASH_W;
+      ctx.strokeStyle = 'rgba(' + col + ',' + alpha.toFixed(3) + ')';
+      ctx.stroke();
+    }
+
+    requestAnimationFrame(frame);
+  }
+
+  size();
+  requestAnimationFrame(frame);
 })();
 </script>
 </body>
