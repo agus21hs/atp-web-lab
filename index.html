@@ -47,16 +47,15 @@
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}main{max-width:1250px}section{scroll-snap-align:start}main{scroll-snap-type:y proximity}
 /* color-change: white glass theme; layout intentionally unchanged */
 :root{--bg:#f7faff;--panel:rgba(255,255,255,.56);--panel2:rgba(255,255,255,.76);--ink:#172033;--muted:#53627a;--soft:#7c8ba3;--line:rgba(30,58,138,.16);--red:#d94b45;--yellow:#d6a928;--green:#5c9870}html,body{background:var(--bg);color:var(--ink)}body{background:linear-gradient(135deg,#fff 0%,#f7faff 52%,#e8f0ff 100%)}body:before{background:radial-gradient(circle at 50% 5%,#ffffffdd,transparent 28%),radial-gradient(circle at 0 42%,#d7e5ffbb,transparent 25%),radial-gradient(circle at 100% 75%,#dce7ff99,transparent 26%);transform:translateY(var(--parallax,0px))}body:after{background:linear-gradient(#fff0 50%,#3157c810 50%);opacity:.035}.nav{background:rgba(255,255,255,.72);border-bottom-color:rgba(30,58,138,.14)}.brand small,.links,.scroll{color:#60708a}.links a:hover{color:#1e3a8a}.btn{border-color:rgba(30,58,138,.22);background:rgba(255,255,255,.45);color:#172033}.btn.primary{background:#1e3a8a;color:#fff;border-color:#1e3a8a}.card,.feature,.step,.faq details{background:rgba(255,255,255,.56);border-color:rgba(30,58,138,.14);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}.section-head p,.copy p,.feature p,.step p,.faq p,.contact p,.banner p{color:#53627a}.trust{border-color:rgba(30,58,138,.14)}.trust div{border-color:rgba(30,58,138,.14)}.work-gallery img{border-color:rgba(30,58,138,.14)}.banner,.contact{background:rgba(255,255,255,.58);border-color:rgba(30,58,138,.14);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}.banner:before{border-color:rgba(30,58,138,.16)}.footer{border-top-color:rgba(30,58,138,.14);color:#60708a}.float .btn{background:#1e3a8a;color:#fff}.photo{background:#e2ebff}.hero:before,.hero:after{background:linear-gradient(135deg,#fff,#dce7ff 48%,#9db7ed);box-shadow:inset 24px 12px 35px #fff,inset -30px -25px 45px #9aadd0}.rambu{background:radial-gradient(circle at 50% 25%,#fff,#dbe6fa 67%)}.marka{background:linear-gradient(175deg,#cbdafa,#f2f6ff)}.marka .road{background:#b8c9e8}.marka .road:before,.marka .road:after{background:repeating-linear-gradient(180deg,#fff 0 48px,transparent 48px 95px)}
-#antigravity-canvas{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;display:none}@media (min-width: 769px) and (hover: hover) and (pointer: fine){#antigravity-canvas{display:block}}@media (prefers-reduced-motion:reduce){#antigravity-canvas{display:none!important}}
+@media (min-width: 769px) and (hover: hover) and (pointer: fine){}@media (prefers-reduced-motion:reduce){}
 
-/* WA Floating Button */
+
 .wa-float{position:fixed;right:20px;bottom:20px;z-index:9999;width:60px;height:60px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(37,211,102,0.3);transition:transform .2s ease,box-shadow .2s ease;text-decoration:none;-webkit-tap-highlight-color:transparent}
 .wa-float:hover{transform:scale(1.08);box-shadow:0 8px 20px rgba(37,211,102,0.4);color:#fff}
 .wa-float svg{width:32px;height:32px;fill:currentColor}
 @media (max-width:600px){.wa-float{right:16px;bottom:16px;width:52px;height:52px}.wa-float svg{width:28px;height:28px}}
 
-/* Trust Stats */
-.trust-stats .stats-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;margin-top:28px}
+
 .stat-card{flex:1 1 200px;max-width:300px;background:rgba(255,255,255,.56);border:1px solid rgba(30,58,138,.14);border-radius:14px;padding:22px 20px;text-align:center;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
 .stat-card .val{display:block;font-size:2.2rem;font-weight:800;color:#1e3a8a;line-height:1.2;font-family:Georgia,'Times New Roman',serif;font-style:italic}
 .stat-card .lbl{display:block;margin-top:6px;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
@@ -69,17 +68,6 @@
 .reveal.show .card:nth-child(2){transition-delay:.12s}
 .map-wrap{position:relative;width:100%;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px}
 .map-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
-
-/* ================= POLISH LAYER (elegan + mobile) ================= */
-:root{--acc:#1e3a8a;--acc2:#0a0e17;--glass:rgba(255,255,255,.74);--r:20px;--r2:16px;--e:cubic-bezier(.2,.7,.3,1);--sh:0 22px 50px -28px rgba(30,58,138,.65)}
-html{scroll-padding-top:88px;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:Georgia,'Times New Roman',serif;letter-spacing:0;-webkit-font-smoothing:antialiased}
-::selection{background:rgba(10,14,23,.14);color:#0b1330}
-:focus-visible{outline:2px solid #0a0e17;outline-offset:3px;border-radius:4px}
-::-webkit-scrollbar{width:10px;height:10px}
-::-webkit-scrollbar-track{background:rgba(30,58,138,.05)}
-::-webkit-scrollbar-thumb{background:rgba(30,58,138,.3);border-radius:99px;border:2px solid transparent;background-clip:content-box}
-::-webkit-scrollbar-thumb:hover{background:rgba(30,58,138,.5);background-clip:content-box}
 
 /* ---- nav ---- */
 .nav{gap:18px;background:rgba(255,255,255,.72);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(30,58,138,.14);box-shadow:none}
@@ -260,7 +248,6 @@ body{font-family:Georgia,'Times New Roman',serif;letter-spacing:0;-webkit-font-s
 }
 
 /* Before / After Slider */
-.ba-compare {
   margin: 28px 0 10px;
   border-radius: var(--r2);
   overflow: hidden;
@@ -268,7 +255,6 @@ body{font-family:Georgia,'Times New Roman',serif;letter-spacing:0;-webkit-font-s
   box-shadow: var(--sh);
   background: var(--panel2);
 }
-.ba-header {
   padding: 18px 22px 14px;
   display: flex;
   justify-content: space-between;
@@ -277,20 +263,17 @@ body{font-family:Georgia,'Times New Roman',serif;letter-spacing:0;-webkit-font-s
   gap: 8px;
   border-bottom: 1px solid var(--line);
 }
-.ba-header h3 {
   margin: 0;
   font-size: 16px;
   font-weight: 600;
   color: var(--ink);
 }
-.ba-hint {
   font-size: 11px;
   color: var(--soft);
   display: inline-flex;
   align-items: center;
   gap: 5px;
 }
-.ba-wrapper {
   position: relative;
   width: 100%;
   height: 380px;
@@ -299,7 +282,6 @@ body{font-family:Georgia,'Times New Roman',serif;letter-spacing:0;-webkit-font-s
   -webkit-user-select: none;
   touch-action: pan-y;
 }
-.ba-img {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -307,7 +289,6 @@ body{font-family:Georgia,'Times New Roman',serif;letter-spacing:0;-webkit-font-s
   object-fit: cover;
   pointer-events: none;
 }
-.ba-after-wrap {
   position: absolute;
   top: 0;
   left: 0;
@@ -318,12 +299,10 @@ body{font-family:Georgia,'Times New Roman',serif;letter-spacing:0;-webkit-font-s
   border-right: 2px solid #fff;
   box-shadow: 2px 0 12px rgba(0,0,0,.25);
 }
-.ba-after-wrap .ba-img {
   width: 100%;
   max-width: none;
   height: 100%;
 }
-.ba-tag {
   position: absolute;
   bottom: 14px;
   padding: 5px 12px;
@@ -336,17 +315,14 @@ body{font-family:Georgia,'Times New Roman',serif;letter-spacing:0;-webkit-font-s
   -webkit-backdrop-filter: blur(8px);
   z-index: 3;
 }
-.ba-tag-before {
   right: 14px;
   background: rgba(10,14,23,.65);
   color: #fff;
 }
-.ba-tag-after {
   left: 14px;
   background: rgba(30,58,138,.85);
   color: #fff;
 }
-.ba-handle {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -365,10 +341,8 @@ body{font-family:Georgia,'Times New Roman',serif;letter-spacing:0;-webkit-font-s
   pointer-events: none;
   transition: transform .15s ease;
 }
-.ba-wrapper:active .ba-handle {
   transform: translate(-50%, -50%) scale(1.12);
 }
-.ba-handle svg {
   width: 20px;
   height: 20px;
   fill: currentColor;
@@ -447,7 +421,6 @@ body:before,body:after{display:none!important}
 /* ---- type: kill serif/italic everywhere ---- */
 h1,h2,h3,h4,.brand,.brand b,.eyebrow,.copy h3,.section-head h2,.feature h3,.step h3,
 .trust strong,.faq summary,.banner h2,.contact h2,.stat-card .val,.ba-header h3,
-.step::before,.atp-wordmark{
   font-family:var(--sans);font-style:normal;letter-spacing:-.028em
 }
 
@@ -489,7 +462,6 @@ h1,h2,h3,h4,.brand,.brand b,.eyebrow,.copy h3,.section-head h2,.feature h3,.step
   padding:64px var(--gutter) 104px;display:flex;flex-direction:column;align-items:center;
   justify-content:center;text-align:center;position:relative;overflow:hidden;isolation:isolate}
 .hero:before,.hero:after{display:none}
-.hero>*:not(.ak-chips){position:relative;z-index:1}
 .eyebrow{display:inline-flex;align-items:center;gap:9px;height:40px;padding:0 18px;
   border-radius:999px;background:rgba(255,255,255,.75);
   backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
@@ -507,13 +479,10 @@ h1,h2,h3,h4,.brand,.brand b,.eyebrow,.copy h3,.section-head h2,.feature h3,.step
   letter-spacing:.02em;color:var(--soft)}
 
 /* ---- floating chips ---- */
-.ak-chips{position:absolute;inset:0;pointer-events:none;z-index:0}
-.ak-chip{position:absolute;display:inline-flex;align-items:center;gap:9px;padding:12px 16px;
   background:#fff;border-radius:16px;font-family:var(--sans);font-size:14px;font-weight:500;
   letter-spacing:-.01em;color:var(--ink);white-space:nowrap;
   box-shadow:0 1px 2px rgba(18,19,23,.06),0 18px 36px -18px rgba(18,19,23,.26);
   animation:akFloat var(--dur,8s) ease-in-out var(--delay,0s) infinite alternate}
-.ak-chip i{width:9px;height:9px;border-radius:50%;background:var(--c,var(--acc));flex:none}
 @keyframes akFloat{
   from{transform:translateY(0) rotate(var(--rot,0deg))}
   to{transform:translateY(-16px) rotate(var(--rot,0deg))}
@@ -630,20 +599,10 @@ h1,h2,h3,h4,.brand,.brand b,.eyebrow,.copy h3,.section-head h2,.feature h3,.step
 .work-gallery img:hover{transform:translateY(-4px);box-shadow:var(--sh);border-color:rgba(18,19,23,.18)}
 
 /* ---- before / after ---- */
-.ba-compare{margin:32px 0 8px;border-radius:var(--r);border:1px solid var(--line);background:#fff;
   box-shadow:0 1px 2px rgba(18,19,23,.05);overflow:hidden}
-.ba-header{padding:20px 24px 16px;border-bottom:1px solid var(--line-soft)}
-.ba-header h3{font-family:var(--sans);font-size:17px;font-weight:500;font-style:normal;
   letter-spacing:-.02em;color:var(--ink);margin:0}
-.ba-hint{font-family:var(--sans);font-size:13px;color:var(--soft)}
-.ba-wrapper{height:420px}
-.ba-after-wrap{border-right:2px solid #fff}
-.ba-tag{font-family:var(--sans);font-size:11.5px;font-weight:500;letter-spacing:.02em;
   text-transform:none;border-radius:999px;padding:6px 13px;
   backdrop-filter:none;-webkit-backdrop-filter:none}
-.ba-tag-before{background:rgba(18,19,23,.72);color:#fff}
-.ba-tag-after{background:rgba(44,100,237,.92);color:#fff}
-.ba-handle{width:46px;height:46px;background:#fff;color:var(--ink);
   box-shadow:0 1px 2px rgba(18,19,23,.1),0 12px 28px -8px rgba(18,19,23,.3)}
 
 /* ---- footer + wordmark ---- */
@@ -651,7 +610,6 @@ h1,h2,h3,h4,.brand,.brand b,.eyebrow,.copy h3,.section-head h2,.feature h3,.step
   padding:56px var(--gutter) 28px;border-top:1px solid var(--line);color:var(--muted);
   font-family:var(--sans);font-size:14px;display:flex;justify-content:space-between;
   flex-wrap:wrap;gap:14px 28px}
-.atp-wordmark{font-family:var(--sans);font-size:clamp(48px,13vw,220px);font-weight:500;
   letter-spacing:-.06em;line-height:.9;text-align:center;color:transparent;
   background:linear-gradient(180deg,#121317 0%,#c9ccd2 100%);
   -webkit-background-clip:text;background-clip:text;
@@ -670,7 +628,6 @@ h1,h2,h3,h4,.brand,.brand b,.eyebrow,.copy h3,.section-head h2,.feature h3,.step
 .reveal{transition:opacity .9s var(--e),transform .9s var(--e)}
 
 /* ================= MOBILE ================= */
-@media (max-width:900px){.ak-chips{display:none}}
 @media (max-width:760px){
   html{scroll-padding-top:76px}
   .nav{height:62px;padding:0 16px;gap:8px}
@@ -717,14 +674,12 @@ h1,h2,h3,h4,.brand,.brand b,.eyebrow,.copy h3,.section-head h2,.feature h3,.step
   .hero .btn{height:52px;font-size:16px}
   .ba-wrapper{height:280px}
   .footer{padding:40px var(--gutter) 28px;justify-content:center;text-align:center}
-  .atp-wordmark{font-size:clamp(44px,15vw,110px);padding-bottom:20px}
   .eyebrow{backdrop-filter:none;-webkit-backdrop-filter:none;background:#fff}
   .card,.feature,.step,.faq details,.stat-card,.banner,.contact,.nav-toggle{
     backdrop-filter:none;-webkit-backdrop-filter:none}
   body::before,body::after{display:none}
 }
 @media (prefers-reduced-motion:reduce){
-  .ak-chip{animation:none}
   *{transition-duration:.01ms!important;animation-duration:.01ms!important}
 }
 
@@ -733,14 +688,11 @@ h1,h2,h3,h4,.brand,.brand b,.eyebrow,.copy h3,.section-head h2,.feature h3,.step
      --ak-violet:#7b5cff;--ease:cubic-bezier(.2,.8,.2,1);--spring:cubic-bezier(.34,1.36,.64,1)}
 
 /* ---- announcement pill ---- */
-.atp-pill{position:relative;z-index:1;display:inline-flex;align-items:center;gap:10px;
   height:40px;padding:0 6px 0 0;border-radius:999px;background:rgba(255,255,255,.78);
   -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
   box-shadow:inset 0 0 0 1px var(--line),0 8px 24px -12px rgba(18,19,23,.22);
   margin-bottom:clamp(24px,4vh,40px);animation:akRise .6s var(--ease) both}
-.atp-pill-badge{background:var(--ink);color:#fff;border-radius:999px;height:40px;
   display:inline-flex;align-items:center;padding:0 15px;font-size:13px;font-weight:500;letter-spacing:.01em}
-.atp-pill-text{color:var(--muted);font-size:14.5px;letter-spacing:.004em;padding-left:4px;white-space:nowrap}
 @keyframes akRise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 
 /* ---- typed headline ---- */
@@ -764,9 +716,6 @@ h1,h2,h3,h4,.brand,.brand b,.eyebrow,.copy h3,.section-head h2,.feature h3,.step
 
 /* ---- orbit ring on stat cards ---- */
 .stat-card{position:relative;overflow:hidden}
-.atp-orbit{position:absolute;top:-34px;right:-34px;width:150px;height:150px;pointer-events:none;opacity:.85}
-.atp-orbit:before{content:"";position:absolute;inset:0;border:1px dashed rgba(18,19,23,.13);border-radius:50%}
-.atp-orbit i{position:absolute;top:50%;left:50%;width:11px;height:11px;margin:-5.5px 0 0 -5.5px;
   border-radius:50%;background:var(--c);box-shadow:0 0 0 4px color-mix(in srgb,var(--c) 22%,transparent);
   animation:akOrbit var(--dur) linear infinite}
 @keyframes akOrbit{
@@ -775,9 +724,7 @@ h1,h2,h3,h4,.brand,.brand b,.eyebrow,.copy h3,.section-head h2,.feature h3,.step
 
 /* ---- pulse dot on process steps ---- */
 .step{position:relative}
-.atp-pulse{position:absolute;top:26px;right:26px;width:9px;height:9px;border-radius:50%;
   background:var(--c);animation:akPulse 2.4s var(--ease) infinite}
-.atp-pulse:before{content:"";position:absolute;inset:0;border-radius:50%;background:var(--c);
   animation:akHalo 2.4s var(--ease) infinite}
 @keyframes akPulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(.82);opacity:.75}}
 @keyframes akHalo{0%{transform:scale(1);opacity:.55}70%,100%{transform:scale(2.6);opacity:0}}
@@ -786,15 +733,12 @@ h1,h2,h3,h4,.brand,.brand b,.eyebrow,.copy h3,.section-head h2,.feature h3,.step
 #ag-canvas{opacity:.9}
 
 /* ---- floating chips: richer float ---- */
-.ak-chip{animation:akFloat2 var(--dur,8s) var(--ease) var(--delay,0s) infinite alternate}
 @keyframes akFloat2{
   0%{transform:translate3d(0,0,0) rotate(var(--rot,0deg))}
   50%{transform:translate3d(6px,-16px,0) rotate(calc(var(--rot,0deg) * -.5))}
   100%{transform:translate3d(-4px,-30px,0) rotate(var(--rot,0deg))}}
 
 @media (prefers-reduced-motion:reduce){
-  .atp-pill,.hero .actions,.hero p,.hero .scroll,.eyebrow{animation:none}
-  .ak-chip,.atp-orbit i,.atp-pulse,.atp-pulse:before{animation:none}
   .atp-type .ak-char{opacity:1}
   .atp-reveal-words .ak-word{color:var(--ink)}
 }
@@ -811,14 +755,12 @@ h1,h2,h3,h4,.brand,.brand b,.eyebrow,.copy h3,.section-head h2,.feature h3,.step
 }
 body{color:var(--ink-soft);font-weight:400}
 h1,h2,h3,h4,.brand b,.copy h3,.section-head h2,.feature h3,.step h3,.trust strong,
-.faq summary,.banner h2,.contact h2,.stat-card .val,.ba-header h3,.atp-wordmark{
   color:var(--ink);font-weight:450}
 .section-head h2{font-weight:450;letter-spacing:-.034em;line-height:1.05}
 .hero h1{font-weight:450;letter-spacing:-.038em;line-height:1.02;color:var(--ink)}
 .banner h2,.contact h2{font-weight:450;letter-spacing:-.034em;line-height:1.06;color:var(--ink)}
 .copy h3,.feature h3,.step h3{font-weight:500;letter-spacing:-.022em;color:var(--ink)}
 .stat-card .val{font-weight:450;letter-spacing:-.032em}
-.atp-wordmark{font-weight:450}
 .trust strong{font-weight:500}
 .brand{font-weight:500}
 .brand b{font-weight:500}
@@ -843,19 +785,14 @@ h1,h2,h3,h4,.brand b,.copy h3,.section-head h2,.feature h3,.step h3,.trust stron
 .banner,.contact{background:var(--container);border-color:var(--line)}
 .step:hover{background:var(--container)}
 .photo{background:var(--container)}
-.ak-chip{box-shadow:0 1px 2px rgba(22,23,28,.05),0 18px 36px -18px rgba(22,23,28,.2)}
 
 /* shadow: lebih halus, tidak sebanyak sebelumnya */
 :root{--sh:0 1px 2px rgba(22,23,28,.05),0 10px 24px -8px rgba(22,23,28,.14),0 32px 64px -24px rgba(22,23,28,.18)}
-.card,.feature,.stat-card,.ba-compare,.process{box-shadow:0 1px 2px rgba(22,23,28,.05)}
 .card:hover,.feature:hover,.stat-card:hover,.work-gallery img:hover{box-shadow:var(--sh)}
 
 /* pill: lebih kalem */
-.atp-pill{box-shadow:inset 0 0 0 1px var(--line),0 6px 20px -12px rgba(22,23,28,.18)}
-.atp-pill-text{color:var(--muted)}
 
 /* wordmark: fade lebih halus */
-.atp-wordmark{background:linear-gradient(180deg,#16171c 0%,#c9ccd2 100%)}
 
 /* scrollbar netral */
 ::-webkit-scrollbar-track{background:var(--container)}
@@ -871,43 +808,74 @@ h1,h2,h3,h4,.brand b,.copy h3,.section-head h2,.feature h3,.step h3,.trust stron
 ::selection{background:rgba(44,100,237,.14)}
 
 /* ================= TOUCH PARTICLES (mobile / sentuh) ================= */
-#tp-canvas{position:fixed;inset:0;width:100%;height:100%;z-index:45;pointer-events:none;display:none}
 @media (hover:none),(pointer:coarse),(max-width:900px){
-  #tp-canvas{display:block}
 }
 @media (prefers-reduced-motion:reduce){
-  #tp-canvas{display:none!important}
 }
+
+/* ================= CONVERSION LAYER ================= */
+.pkg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pkg-card{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px 24px;transition:transform .35s var(--e),box-shadow .35s var(--e),border-color .35s var(--e)}
+.pkg-card:hover{transform:translateY(-6px);box-shadow:var(--sh);border-color:rgba(18,19,23,.2)}
+.pkg-card.is-featured{border:2px solid #1e3a8a;box-shadow:0 18px 46px -26px rgba(30,58,138,.75)}
+.pkg-flag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:#1e3a8a;color:#fff;font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;padding:6px 15px;border-radius:999px;white-space:nowrap}
+.pkg-name{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:23px;color:#0a0e17;margin:0 0 4px}
+.pkg-for{font-family:var(--sans);font-size:12.5px;color:var(--muted);margin:0 0 18px}
+.pkg-price{font-family:var(--sans);font-size:15px;color:#3a4358;margin:0 0 6px}
+.pkg-price b{display:block;font-size:31px;font-weight:800;letter-spacing:-.03em;color:#0a0e17;line-height:1.15}
+.pkg-price span{font-size:12.5px;color:var(--muted)}
+.pkg-list{list-style:none;margin:20px 0 24px;padding:0;display:grid;gap:11px}
+.pkg-list li{position:relative;padding-left:26px;font-family:var(--sans);font-size:13.5px;line-height:1.55;color:#3a4358}
+.pkg-list li:before{content:"";position:absolute;left:0;top:3px;width:16px;height:16px;border-radius:50%;background:rgba(30,58,138,.1)}
+.pkg-list li:after{content:"";position:absolute;left:5px;top:8px;width:6px;height:3px;border-left:1.8px solid #1e3a8a;border-bottom:1.8px solid #1e3a8a;transform:rotate(-45deg)}
+.pkg-card .btn{margin-top:auto;width:100%}
+
+.testi{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.testi-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 24px;display:flex;flex-direction:column;gap:14px}
+.testi-stars{color:#f2b600;font-size:15px;letter-spacing:2px}
+.testi-text{font-family:Georgia,'Times New Roman',serif;font-size:15px;line-height:1.65;color:#2b3550;margin:0;flex:1}
+.testi-who{font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+.testi-who b{display:block;color:#0a0e17;font-size:13.5px;font-weight:700}
+
+.quote{display:grid;grid-template-columns:1.05fr .95fr;gap:0;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#fff}
+.quote-left{padding:44px 40px}
+.quote-left h2{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:clamp(28px,3.4vw,42px);letter-spacing:-.04em;color:#0a0e17;margin:0 0 12px;line-height:1.05}
+.quote-left>p{font-family:var(--sans);font-size:14.5px;line-height:1.7;color:#3a4358;margin:0 0 26px;max-width:44ch}
+.quote-points{list-style:none;margin:0;padding:0;display:grid;gap:13px}
+.quote-points li{display:flex;gap:12px;align-items:flex-start;font-family:var(--sans);font-size:13.5px;line-height:1.55;color:#3a4358}
+.quote-points .qp-ic{flex:0 0 22px;height:22px;border-radius:50%;background:rgba(37,211,102,.13);display:grid;place-items:center;margin-top:1px}
+.quote-points .qp-ic svg{width:12px;height:12px;fill:#1e9e57}
+.quote-right{padding:44px 40px;background:linear-gradient(160deg,#f7faff,#eaf1ff);border-left:1px solid var(--line)}
+.quote-form{display:grid;gap:14px}
+.quote-form label{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#53627a;display:grid;gap:6px}
+.quote-form input,.quote-form select,.quote-form textarea{width:100%;font-family:var(--sans);font-size:14px;color:#0a0e17;background:#fff;border:1px solid rgba(30,58,138,.2);border-radius:12px;padding:12px 14px;transition:border-color .25s var(--e),box-shadow .25s var(--e)}
+.quote-form input:focus,.quote-form select:focus,.quote-form textarea:focus{outline:none;border-color:#1e3a8a;box-shadow:0 0 0 3px rgba(30,58,138,.12)}
+.quote-form textarea{resize:vertical;min-height:78px}
+.quote-form .btn{width:100%;margin-top:4px}
+.quote-note{font-family:var(--sans);font-size:11.5px;color:var(--muted);text-align:center;margin:0}
+.quote-ok{display:none;font-family:var(--sans);font-size:13px;color:#1e9e57;background:rgba(37,211,102,.1);border:1px solid rgba(37,211,102,.28);border-radius:10px;padding:11px 14px;text-align:center}
+.quote-ok.show{display:block}
+
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-top:1px solid var(--line);box-shadow:0 -10px 30px -22px rgba(22,23,28,.5)}
+.sticky-cta .sc-in{max-width:1250px;margin:0 auto;display:flex;align-items:center;gap:12px}
+.sticky-cta .sc-txt{flex:1;min-width:0}
+.sticky-cta .sc-txt b{display:block;font-family:var(--sans);font-size:13.5px;color:#0a0e17;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sticky-cta .sc-txt span{font-family:var(--sans);font-size:11.5px;color:var(--muted)}
+.sticky-cta .btn{flex:0 0 auto;padding:12px 20px}
+@media (max-width:900px){.pkg{grid-template-columns:1fr}.testi{grid-template-columns:1fr}.quote{grid-template-columns:1fr}.quote-left{padding:34px 24px}.quote-right{padding:30px 24px;border-left:0;border-top:1px solid var(--line)}.sticky-cta{display:block}body{padding-bottom:74px}.wa-float{bottom:84px}}
+@media (prefers-reduced-motion:reduce){.pkg-card,.testi-card{transition:none}}
+
 </style>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@8..144,400..600&display=swap">
 </head>
 <body>
-<div id="antigravity-canvas" aria-hidden="true"><canvas id="ag-canvas"></canvas></div>
-<canvas id="tp-canvas" aria-hidden="true"></canvas>
 <header class="nav"><a class="brand" href="#top"><img class="brand-logo" src="commerce-assets/logo/logo-ftti-transparent.png" alt="Logo ATP" decoding="async" fetchpriority="high"><span><b>CV. ANUGERAH TIGA PILAR</b><small>Supplier & General Contractor</small></span></a><nav class="links"><a href="#rambu">Rambu</a><a href="#marka">Marka Jalan</a><a href="#proses">Proses</a><a href="#kontak">Kontak</a></nav><button class="nav-toggle" type="button" aria-label="Buka menu" aria-expanded="false"><span></span><span></span><span></span></button></header>
 <main id="top">
-<section class="hero"><div class="eyebrow">Solusi keselamatan jalan dari <span class="orb"></span> CV. ANUGERAH TIGA PILAR</div><div class="atp-pill" role="status"><span class="atp-pill-badge">Gresik</span><span class="atp-pill-text">Rambu lalu lintas &amp; pengecatan marka jalan profesional</span></div>
-<h1 class="atp-type" data-text="Jalan yang aman, dimulai dari sini." aria-label="Jalan yang aman, dimulai dari sini."></h1><p>Kami melayani pembuatan Rambu-rambu Lalulintas dan Pengecatan Marka Jalan</p><div class="actions"><a class="btn primary ripple" href="#rambu">Lihat produk</a><a class="btn ripple" href="#kontak">Minta penawaran</a></div><span class="scroll">scroll to explore ↓</span><div class="ak-chips" aria-hidden="true"><span class="ak-chip" style="left:5%;top:16%;--dur:7s;--delay:-1s;--rot:-6deg;--c:#2c64ed"><i></i>Rambu lalu lintas</span><span class="ak-chip" style="right:6%;top:11%;--dur:8s;--delay:-2s;--rot:5deg;--c:#1e9e57"><i></i>Zebra cross</span><span class="ak-chip" style="left:8%;bottom:19%;--dur:9s;--delay:-3s;--rot:6deg;--c:#ffcf03"><i></i>Pengecatan marka jalan</span><span class="ak-chip" style="right:9%;bottom:23%;--dur:7.5s;--delay:-4s;--rot:-5deg;--c:#f84242"><i></i>Rambu K3 &amp; area proyek</span><span class="ak-chip" style="left:44%;top:6%;--dur:10s;--delay:-5s;--rot:3deg;--c:#121317"><i></i>Gresik · Surabaya</span></div></section>
+<section class="hero"><div class="eyebrow">Solusi keselamatan jalan dari <span class="orb"></span> CV. ANUGERAH TIGA PILAR</div><h1 class="atp-type" data-text="Jalan yang aman, dimulai dari sini." aria-label="Jalan yang aman, dimulai dari sini."></h1><p>Kami melayani pembuatan Rambu-rambu Lalulintas dan Pengecatan Marka Jalan</p><div class="actions"><a class="btn primary ripple" href="#rambu">Lihat produk</a><a class="btn ripple" href="#kontak">Minta penawaran</a></div><span class="scroll">scroll to explore ↓</span></section>
 <section class="section reveal"><div class="trust"><div><strong>Rambu & marka</strong><span>Satu partner untuk kebutuhan keselamatan jalan</span></div><div><strong>Rapi & jelas</strong><span>Pengerjaan memperhatikan fungsi dan tampilan</span></div><div><strong>Untuk berbagai area</strong><span>Proyek, kawasan, gedung, dan lingkungan</span></div><div><strong>Konsultasi kebutuhan</strong><span>Diskusikan spesifikasi sebelum pengerjaan</span></div></div></section>
 <section class="section reveal" id="rambu"><div class="section-head"><div><h2>Rambu lalu lintas</h2><p>Informasi dan peringatan yang membantu pengguna jalan mengambil keputusan dengan lebih cepat.</p></div><span class="number">01 / 02</span></div><div class="grid"><article class="card"><div class="photo"><img src="commerce-assets/rambu/rambu-baru.jpg" alt="Rambu keselamatan" loading="lazy" decoding="async"></div><div class="copy"><h3>Rambu keselamatan</h3><p>Rambu untuk area proyek, jalan lingkungan, fasilitas umum, kawasan industri, gudang, sekolah, perumahan, dan kebutuhan pengaturan lalu lintas lainnya.</p></div></article><article class="card"><div class="photo"><img src="commerce-assets/rambu/rambu-kai-logistik.jpg" alt="Rambu area terbatas KAI Logistik" loading="lazy" decoding="async"></div><div class="copy"><h3>Rambu area terbatas & K3</h3><p>Contoh rambu peringatan area bongkar muat dengan informasi larangan masuk dan kewajiban penggunaan perlengkapan keselamatan kerja.</p></div></article></div></section>
-<section class="section reveal" id="marka"><div class="section-head"><div><h2>Marka jalan</h2><p>Garis, simbol, dan pembagian area yang membuat alur pergerakan lebih terarah.</p></div><span class="number">02 / 02</span></div><div class="grid"><article class="card"><div class="photo"><img src="commerce-assets/marka/proses-pengecatan-zebra-cross.jpg" alt="Proses pengecatan zebra cross" loading="lazy" decoding="async"></div><div class="copy"><h3>Pengecatan marka jalan</h3><p>Marka tengah, marka tepi, zebra cross, panah arah, area parkir, jalur kendaraan, jalur pedestrian, dan kebutuhan marka area lainnya.</p></div></article><article class="card"><div class="photo"><img src="commerce-assets/marka/marka-kuning-larangan-parkir.jpg" alt="Marka kuning area larangan parkir" loading="lazy" decoding="async"></div><div class="copy"><h3>Marka area & larangan parkir</h3><p>Dokumentasi pengerjaan garis batas, area hatch kuning, jalur kendaraan, serta penataan area agar lebih tertib dan mudah dipahami.</p></div></article></div><div class="work-gallery"><img src="commerce-assets/marka/zebra-cross-jalan-basah.jpg" alt="Zebra cross dan marka jalan" loading="lazy" decoding="async"><img src="commerce-assets/marka/marka-area-kampus.jpg" alt="Marka area kampus" loading="lazy" decoding="async"><img src="commerce-assets/marka/proses-marka-malam.jpg" alt="Pengerjaan marka malam hari" loading="lazy" decoding="async"><img src="commerce-assets/marka/marka-hatch-kendaraan.jpg" alt="Marka hatch kendaraan" loading="lazy" decoding="async"><img src="commerce-assets/marka/proses-marka-depan-gedung.jpg" alt="Pengerjaan marka depan gedung" loading="lazy" decoding="async"></div>
-<div class="ba-compare reveal">
-  <div class="ba-header">
-    <h3>Interaktif: Pengerjaan Marka Zebra Cross</h3>
-    <span class="ba-hint">↔ Geser slider untuk melihat hasil</span>
-  </div>
-  <div class="ba-wrapper" id="ba-slider">
-    <img class="ba-img" src="commerce-assets/marka/rambu-zebra-cross.jpg" alt="Hasil akhir marka zebra cross rapi">
-    <div class="ba-after-wrap" id="ba-after">
-      <img class="ba-img" src="commerce-assets/marka/proses-zebra-cross.jpg" alt="Proses pengerjaan pengecatan zebra cross">
-    </div>
-    <span class="ba-tag ba-tag-after">Proses</span>
-    <span class="ba-tag ba-tag-before">Selesai</span>
-    <div class="ba-handle" id="ba-handle" aria-hidden="true">
-      <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z M15.41 7.41L10.83 12l4.58 4.59L14 18l-6-6 6-6 1.41 1.41z"/></svg>
-    </div>
-  </div>
-</div></section>
+<section class="section reveal" id="marka"><div class="section-head"><div><h2>Marka jalan</h2><p>Garis, simbol, dan pembagian area yang membuat alur pergerakan lebih terarah.</p></div><span class="number">02 / 02</span></div><div class="grid"><article class="card"><div class="photo"><img src="commerce-assets/marka/proses-pengecatan-zebra-cross.jpg" alt="Proses pengecatan zebra cross" loading="lazy" decoding="async"></div><div class="copy"><h3>Pengecatan marka jalan</h3><p>Marka tengah, marka tepi, zebra cross, panah arah, area parkir, jalur kendaraan, jalur pedestrian, dan kebutuhan marka area lainnya.</p></div></article><article class="card"><div class="photo"><img src="commerce-assets/marka/marka-kuning-larangan-parkir.jpg" alt="Marka kuning area larangan parkir" loading="lazy" decoding="async"></div><div class="copy"><h3>Marka area & larangan parkir</h3><p>Dokumentasi pengerjaan garis batas, area hatch kuning, jalur kendaraan, serta penataan area agar lebih tertib dan mudah dipahami.</p></div></article></div><div class="work-gallery"><img src="commerce-assets/marka/zebra-cross-jalan-basah.jpg" alt="Zebra cross dan marka jalan" loading="lazy" decoding="async"><img src="commerce-assets/marka/marka-area-kampus.jpg" alt="Marka area kampus" loading="lazy" decoding="async"><img src="commerce-assets/marka/proses-marka-malam.jpg" alt="Pengerjaan marka malam hari" loading="lazy" decoding="async"><img src="commerce-assets/marka/marka-hatch-kendaraan.jpg" alt="Marka hatch kendaraan" loading="lazy" decoding="async"><img src="commerce-assets/marka/proses-marka-depan-gedung.jpg" alt="Pengerjaan marka depan gedung" loading="lazy" decoding="async"></div></section>
+
 <section class="section reveal"><div class="section-head"><div><h2 class="atp-reveal-words">Kenapa memilih kami?</h2><p>Hal-hal yang penting dalam pekerjaan rambu dan marka bukan cuma hasil akhirnya, tapi juga prosesnya.</p></div></div><div class="feature-grid"><article class="feature"><b>01</b><h3>Mulai dari kebutuhan</h3><p>Kami membantu memahami kebutuhan area, fungsi rambu, jenis marka, serta penempatan yang diperlukan sebelum pekerjaan dilakukan.</p></article><article class="feature"><b>02</b><h3>Fokus pada keterbacaan</h3><p>Rambu dan marka harus mudah terlihat, mudah dipahami, dan sesuai dengan kondisi area penggunaannya.</p></article><article class="feature"><b>03</b><h3>Hasil yang terlihat rapi</h3><p>Detail pemasangan, kerapian garis, kebersihan area, dan tampilan akhir menjadi bagian penting dari pekerjaan.</p></article></div></section>
 
 <section class="section reveal trust-stats" id="statistik">
@@ -915,13 +883,13 @@ h1,h2,h3,h4,.brand b,.copy h3,.section-head h2,.feature h3,.step h3,.trust stron
 <div><h2>Pencapaian & Kepercayaan</h2><p>Komitmen kami menghadirkan rambu dan marka yang presisi serta berstandar.</p></div>
 </div>
 <div class="stats-grid">
-<div class="stat-card"><span class="atp-orbit" aria-hidden="true"><i style="--r:52px;--dur:9s;--c:#2c64ed"></i><i style="--r:78px;--dur:13s;--c:#f84242;animation-delay:-4s"></i></span><span class="val" data-count="100000" data-suffix="+">0</span><span class="lbl">Proyek Selesai</span></div>
-<div class="stat-card"><span class="atp-orbit" aria-hidden="true"><i style="--r:52px;--dur:11s;--c:#1e9e57"></i><i style="--r:78px;--dur:15s;--c:#ffcf03;animation-delay:-6s"></i></span><span class="val" data-count="2020">0</span><span class="lbl">Tahun Pengalaman</span></div>
-<div class="stat-card"><span class="atp-orbit" aria-hidden="true"><i style="--r:52px;--dur:10s;--c:#7b5cff"></i><i style="--r:78px;--dur:14s;--c:#2c64ed;animation-delay:-3s"></i></span><span class="val" data-count="100000" data-suffix="+">0</span><span class="lbl">Klien Puas</span></div>
+<div class="stat-card"><span class="val" data-count="100000" data-suffix="+">0</span><span class="lbl">Proyek Selesai</span></div>
+<div class="stat-card"><span class="val" data-count="2020">0</span><span class="lbl">Tahun Pengalaman</span></div>
+<div class="stat-card"><span class="val" data-count="100000" data-suffix="+">0</span><span class="lbl">Klien Puas</span></div>
 </div>
 </section>
 
-<section class="section reveal" id="proses"><div class="section-head"><div><h2>Alur pengerjaan</h2><p>Simple, jelas, dan bisa dikonsultasikan dari awal.</p></div></div><div class="process"><article class="step" data-step="01"><span class="atp-pulse" style="--c:#2c64ed" aria-hidden="true"></span><h3>Konsultasi</h3><p>Ceritakan lokasi, kebutuhan, ukuran area, dan jenis pekerjaan yang diinginkan.</p></article><article class="step" data-step="02"><span class="atp-pulse" style="--c:#1e9e57" aria-hidden="true"></span><h3>Survey & pembahasan</h3><p>Bahas kondisi lapangan, pilihan produk, penempatan, warna, serta teknis pengerjaan.</p></article><article class="step" data-step="03"><span class="atp-pulse" style="--c:#f2b600" aria-hidden="true"></span><h3>Penawaran</h3><p>Anda menerima rincian kebutuhan pekerjaan yang dapat disesuaikan dengan proyek.</p></article><article class="step" data-step="04"><span class="atp-pulse" style="--c:#f84242" aria-hidden="true"></span><h3>Pengerjaan</h3><p>Tim melaksanakan pekerjaan sesuai hasil pembahasan dan kesepakatan.</p></article></div></section>
+<section class="section reveal" id="proses"><div class="section-head"><div><h2>Alur pengerjaan</h2><p>Simple, jelas, dan bisa dikonsultasikan dari awal.</p></div></div><div class="process"><article class="step" data-step="01"><h3>Konsultasi</h3><p>Ceritakan lokasi, kebutuhan, ukuran area, dan jenis pekerjaan yang diinginkan.</p></article><article class="step" data-step="02"><h3>Survey & pembahasan</h3><p>Bahas kondisi lapangan, pilihan produk, penempatan, warna, serta teknis pengerjaan.</p></article><article class="step" data-step="03"><h3>Penawaran</h3><p>Anda menerima rincian kebutuhan pekerjaan yang dapat disesuaikan dengan proyek.</p></article><article class="step" data-step="04"><h3>Pengerjaan</h3><p>Tim melaksanakan pekerjaan sesuai hasil pembahasan dan kesepakatan.</p></article></div></section>
 <section class="section reveal"><div class="faq"><details><summary>Apakah bisa untuk proyek kecil?</summary><p>Bisa. Silakan konsultasikan kebutuhan dan lokasi pekerjaan agar dapat dibahas pilihan yang paling sesuai.</p></details><details><summary>Apakah bisa datang survey lokasi?</summary><p>Untuk kebutuhan survey, silakan hubungi kami terlebih dahulu dengan mengirimkan lokasi dan gambaran pekerjaan.</p></details><details><summary>Jenis marka apa saja yang tersedia?</summary><p>Kebutuhan dapat meliputi marka tepi, marka tengah, zebra cross, panah arah, parkir, jalur kendaraan, dan marka area sesuai permintaan.</p></details><details><summary>Bagaimana cara mendapatkan penawaran?</summary><p>Kirim foto lokasi, ukuran perkiraan, alamat proyek, dan kebutuhan rambu atau marka melalui WhatsApp.</p></details></div></section>
 <section class="banner reveal"><h2 class="atp-reveal-words">Jadikan area lebih tertib, jelas, dan aman.</h2><p>Setiap lokasi punya kebutuhan yang berbeda. Konsultasikan kebutuhan rambu dan marka Anda bersama kami.</p></section>
 <section class="contact reveal" id="kontak"><h2 class="atp-reveal-words">Siap membahas proyek Anda?</h2><p>Hubungi kami untuk konsultasi kebutuhan rambu lalu lintas dan marka jalan.<br><b>+62 857-0838-3985</b> · <b>+62 855-7057-775</b><br>anugerah.3pilar@gmail.com<br>Perumahan Puri Asta Kencana Blok D18, RT.019/RW.005, Gantang, Boteng, Kec. Menganti, Kabupaten Gresik, Jawa Timur 61174</p><div class="map-wrap">
@@ -930,7 +898,49 @@ h1,h2,h3,h4,.brand b,.copy h3,.section-head h2,.feature h3,.step h3,.trust stron
 
 <a class="btn btn-wa ripple" href="https://wa.me/628557057775?text=Pak%2C%20saya%20ingin%20tanya-tanya">Chat WhatsApp</a></section>
 </main>
-<footer class="footer"><div class="atp-wordmark" aria-hidden="true">ANUGERAH TIGA PILAR</div><span>© 2026 CV. ANUGERAH TIGA PILAR. Seluruh hak cipta dilindungi.</span><span>Rambu · Marka · Keselamatan jalan</span></footer>
+
+<section class="section reveal" id="paket"><div class="section-head"><div><h2 class="atp-reveal-words">Pilih paket pekerjaan</h2><p>Harga transparan, bisa disesuaikan dengan luas area dan jenis pekerjaan.</p></div><span class="number">03 / 05</span></div>
+<div class="pkg">
+<article class="pkg-card"><h3 class="pkg-name">Rambu Dasar</h3><p class="pkg-for">Untuk jalan lingkungan, perumahan, dan area kecil</p><p class="pkg-price">Mulai<b>Rp 350rb</b><span>/ unit rambu terpasang</span></p>
+<ul class="pkg-list"><li>Rambu peringatan, larangan, dan petunjuk</li><li>Bahan reflektoran standar</li><li>Pemasangan tiang besi atau dinding</li><li>Garansi posisi &amp; kekencangan 6 bulan</li></ul>
+<a class="btn ripple" href="#quote">Tanya paket ini</a></article>
+
+<article class="pkg-card is-featured"><span class="pkg-flag">Paling banyak dipilih</span><h3 class="pkg-name">Marka Jalan Lengkap</h3><p class="pkg-for">Untuk jalan raya, kawasan industri, dan area parkir</p><p class="pkg-price">Mulai<b>Rp 25rb</b><span>/ meter persegi</span></p>
+<ul class="pkg-list"><li>Marka tengah, tepi, zebra cross, panah arah</li><li>Cat termoplastik atau akrilik tahan cuaca</li><li>Pengerjaan malam tanpa ganggu lalu lintas</li><li>Survey lokasi &amp; gambar rencana gratis</li></ul>
+<a class="btn primary ripple" href="#quote">Minta penawaran</a></article>
+
+<article class="pkg-card"><h3 class="pkg-name">Proyek K3 &amp; Kawasan</h3><p class="pkg-for">Untuk pabrik, gudang, pelabuhan, dan area proyek</p><p class="pkg-price">Custom<b>Sesuai kebutuhan</b><span>survey dulu, harga menyusul</span></p>
+<ul class="pkg-list"><li>Rambu K3 lengkap + marka area hatch</li><li>Penataan jalur kendaraan &amp; pedestrian</li><li>Konsultasi standar keselamatan kerja</li><li>Pengerjaan bertahap sesuai jadwal proyek</li></ul>
+<a class="btn ripple" href="#quote">Diskusikan proyek</a></article>
+</div></section>
+
+<section class="section reveal" id="testimoni"><div class="section-head"><div><h2 class="atp-reveal-words">Kata pelanggan</h2><p>Beberapa masukan dari pihak yang sudah bekerja sama dengan kami.</p></div><span class="number">04 / 05</span></div>
+<div class="testi">
+<article class="testi-card"><div class="testi-stars" aria-label="5 dari 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testi-text">Marka zebra cross di depan kampus kami dikerjakan semalaman, paginya sudah bisa dipakai mahasiswa. Garisnya rapi dan warnanya kontras.</p><div class="testi-who"><b>Bagas Prasetyo</b>Fasilitas Kampus &mdash; Gresik</div></article>
+<article class="testi-card"><div class="testi-stars" aria-label="5 dari 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testi-text">Rambu area bongkar muat dipasang sesuai arahan tim K3 kami. Prosesnya cepat, penempatan logis, dan harga masuk anggaran.</p><div class="testi-who"><b>Retno Wulandari</b>Supervisor Logistik &mdash; Surabaya</div></article>
+<article class="testi-card"><div class="testi-stars" aria-label="5 dari 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testi-text">Sudah tiga kali pakai jasa ATP untuk marka parkir dan jalur kendaraan. Pengerjaan selalu bersih, area kembali rapi setelah selesai.</p><div class="testi-who"><b>Hendra Kusuma</b>Manajer Pabrik &mdash; Sidoarjo</div></article>
+</div></section>
+
+<section class="section reveal" id="quote"><div class="quote"><div class="quote-left"><h2 class="atp-reveal-words">Minta penawaran gratis</h2><p>Isi form ini, tim kami balas lewat WhatsApp dalam 1&times;24 jam kerja dengan perkiraan biaya dan jadwal.</p>
+<ul class="quote-points">
+<li><span class="qp-ic"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19.2 20 8.2l-1.5-1.5z"/></svg></span><span>Survey lokasi gratis untuk area Gresik &amp; Surabaya</span></li>
+<li><span class="qp-ic"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19.2 20 8.2l-1.5-1.5z"/></svg></span><span>Harga transparan, tanpa biaya tersembunyi</span></li>
+<li><span class="qp-ic"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19.2 20 8.2l-1.5-1.5z"/></svg></span><span>Bisa pengerjaan malam atau akhir pekan</span></li>
+<li><span class="qp-ic"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19.2 20 8.2l-1.5-1.5z"/></svg></span><span>Menerima proyek kecil maupun kontrak tahunan</span></li>
+</ul></div>
+<div class="quote-right"><form class="quote-form" id="quoteForm" novalidate>
+<label>Nama lengkap<input type="text" name="nama" placeholder="Nama Anda" required autocomplete="name"></label>
+<label>Nomor WhatsApp<input type="tel" name="wa" placeholder="08xxxxxxxxxx" required autocomplete="tel"></label>
+<label>Jenis pekerjaan<select name="jenis" required><option value="">Pilih jenis&hellip;</option><option>Pengecatan marka jalan</option><option>Pembuatan rambu lalu lintas</option><option>Rambu K3 &amp; area proyek</option><option>Keduanya (rambu + marka)</option></select></label>
+<label>Lokasi / alamat proyek<input type="text" name="lokasi" placeholder="Contoh: Jl. Dr. Wahidin, Gresik" required></label>
+<label>Detail kebutuhan<textarea name="detail" placeholder="Contoh: zebra cross 3 titik, total &plusmn;40 m&sup2;, area depan ruko"></textarea></label>
+<button class="btn primary ripple" type="submit">Kirim &amp; buka WhatsApp</button>
+<p class="quote-ok" id="quoteOk"></p>
+<p class="quote-note">Data hanya dipakai untuk membalas penawaran Anda.</p>
+</form></div></div></section>
+
+<div class="sticky-cta" role="region" aria-label="Hubungi kami"><div class="sc-in"><div class="sc-txt"><b>Butuh rambu atau marka jalan?</b><span>Balas cepat via WhatsApp &middot; Survey gratis</span></div><a class="btn btn-wa ripple" href="https://wa.me/628557057775?text=Pak%2C%20saya%20mau%20tanya%20penawaran%20rambu%2Fmarka%20jalan">Chat sekarang</a></div></div>
+<footer class="footer"><span>© 2026 CV. ANUGERAH TIGA PILAR. Seluruh hak cipta dilindungi.</span><span>Rambu · Marka · Keselamatan jalan</span></footer>
 <script>const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>io.observe(e));</script>
 <script>
 (function(){
@@ -1288,98 +1298,46 @@ document.querySelectorAll('.btn, .wa-float, .nav-toggle').forEach(function(el) {
 
 <script>
 (function(){
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var coarse = window.matchMedia('(hover:none)').matches ||
-               window.matchMedia('(pointer:coarse)').matches ||
-               window.matchMedia('(max-width:900px)').matches;
-  var canvas = document.getElementById('tp-canvas');
-  if (!canvas || reduce || !coarse) { if (canvas) canvas.style.display = 'none'; return; }
-
-  var ctx = canvas.getContext('2d');
-  if (!ctx) return;
-  var W = 0, H = 0, dpr = 1, parts = [], raf = 0, lastTrail = 0;
-  var MAX = 90;
-  var INK = '22,23,28', ACC = '44,100,237';
-
-  function size(){
-    dpr = Math.min(window.devicePixelRatio || 1, 2);
-    W = window.innerWidth; H = window.innerHeight;
-    canvas.width = Math.round(W * dpr);
-    canvas.height = Math.round(H * dpr);
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  }
-  size();
-  window.addEventListener('resize', size);
-  window.addEventListener('orientationchange', function(){ setTimeout(size, 120); });
-
-  function spawn(x, y, n, power){
-    for (var i = 0; i < n; i++){
-      if (parts.length >= MAX) parts.shift();
-      var a = Math.random() * Math.PI * 2;
-      var sp = (0.4 + Math.random() * 1) * power;
-      parts.push({
-        x: x, y: y,
-        vx: Math.cos(a) * sp,
-        vy: Math.sin(a) * sp - power * 0.25,
-        r: 1.2 + Math.random() * 2.6,
-        life: 1,
-        decay: 0.018 + Math.random() * 0.022,
-        c: Math.random() < 0.22 ? ACC : INK
-      });
+  var f=document.getElementById('quoteForm'); if(!f) return;
+  var ok=document.getElementById('quoteOk');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var d=new FormData(f);
+    var nama=(d.get('nama')||'').toString().trim();
+    var wa=(d.get('wa')||'').toString().trim();
+    var jenis=(d.get('jenis')||'').toString().trim();
+    var lokasi=(d.get('lokasi')||'').toString().trim();
+    var detail=(d.get('detail')||'').toString().trim();
+    if(!nama||!wa||!jenis||!lokasi){
+      if(ok){ok.textContent='Lengkapi nama, WhatsApp, jenis, dan lokasi.';ok.classList.add('show');}
+      return;
     }
-    if (!raf) raf = requestAnimationFrame(tick);
-  }
-
-  function tick(){
-    ctx.clearRect(0, 0, W, H);
-    for (var i = parts.length - 1; i >= 0; i--){
-      var p = parts[i];
-      p.x += p.vx; p.y += p.vy;
-      p.vy += 0.055;              // gravity
-      p.vx *= 0.965; p.vy *= 0.965;
-      p.life -= p.decay;
-      if (p.life <= 0 || p.y > H + 40){ parts.splice(i, 1); continue; }
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r * p.life, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(' + p.c + ',' + (0.55 * p.life).toFixed(3) + ')';
-      ctx.fill();
-    }
-    if (parts.length) { raf = requestAnimationFrame(tick); }
-    else { ctx.clearRect(0, 0, W, H); raf = 0; }
-  }
-
-  function pos(e){
-    var t = (e.touches && e.touches[0]) ? e.touches[0] : e;
-    return { x: t.clientX, y: t.clientY };
-  }
-
-  // tap / press -> burst
-  window.addEventListener('pointerdown', function(e){
-    var p = pos(e);
-    spawn(p.x, p.y, 16, 3.2);
-  }, {passive:true});
-
-  // drag -> trail
-  window.addEventListener('pointermove', function(e){
-    var p = pos(e);
-    var now = e.timeStamp || 0;
-    if (now - lastTrail < 26) return;
-    lastTrail = now;
-    if (parts.length > MAX - 4) return;
-    spawn(p.x, p.y, 2, 0.9);
-  }, {passive:true});
-
-  // lift finger -> small puff
-  window.addEventListener('pointerup', function(e){
-    var p = pos(e);
-    spawn(p.x, p.y, 6, 1.4);
-  }, {passive:true});
-
-  // don't run while tab hidden
-  document.addEventListener('visibilitychange', function(){
-    if (document.hidden && raf){ cancelAnimationFrame(raf); raf = 0; }
-    else if (!document.hidden && parts.length && !raf){ raf = requestAnimationFrame(tick); }
+    var num=wa.replace(/[^0-9]/g,'');
+    if(num.indexOf('62')===0){}else if(num.indexOf('0')===0){num='62'+num.slice(1);}
+    var msg='Halo CV ATP, saya mau minta penawaran.%0A%0A'
+      +'Nama: '+encodeURIComponent(nama)+'%0A'
+      +'WA: '+encodeURIComponent(wa)+'%0A'
+      +'Jenis: '+encodeURIComponent(jenis)+'%0A'
+      +'Lokasi: '+encodeURIComponent(lokasi)+'%0A'
+      +(detail?'Detail: '+encodeURIComponent(detail)+'%0A':'');
+    if(ok){ok.textContent='Terkirim! Membuka WhatsApp\u2026';ok.classList.add('show');}
+    window.open('https://wa.me/'+num+'?text='+msg,'_blank','noopener');
   });
+})();
+</script>
+<script>
+(function(){
+  var bar=document.querySelector('.sticky-cta'); if(!bar) return;
+  var shown=false;
+  function onScroll(){
+    var y=window.scrollY||0;
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    var pct=h>0?y/h:0;
+    var should=(y>600&&pct<0.92)||y>h-500;
+    if(should!==shown){shown=should;bar.style.display=should?'block':'none';}
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
 })();
 </script>
 </body>
